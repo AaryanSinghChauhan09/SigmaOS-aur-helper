@@ -1,0 +1,10 @@
+[package]
+name = "sigmaos_aur_helper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+name = "sigmaos_aur_helper"
+path = "src/lib.rs"
