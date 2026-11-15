@@ -2,9 +2,37 @@
 name = "sigmaos_aur_helper"
 version = "0.1.0"
 edition = "2021"
+authors = ["SigmaOS Team"]
+description = "SigmaOS AUR helper for Arch Linux package management"
+license = "MIT OR GPL-2.0"
+repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-aur-helper"
+readme = "README.md"
+keywords = ["aur", "arch", "package-manager", "sigmaos"]
+categories = ["command-line-utilities"]
 
 [dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+anyhow = "1.0"
+colored = "2.0"
+urlencoding = "2.1"
 
-[lib]
-name = "sigmaos_aur_helper"
-path = "src/lib.rs"
+[dev-dependencies]
+
+[profile.dev]
+opt-level = 0
+debug = false
+incremental = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
+[[bin]]
+name = "sigmaos-aur"
+path = "src/main.rs"
