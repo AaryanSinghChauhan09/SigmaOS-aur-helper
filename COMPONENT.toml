@@ -3,7 +3,7 @@ name = "SigmaOS-aur-helper"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "aur-helper component"
+description = "AUR helper for Arch Linux package management with yay/parcli equivalent functionality"
 upstream = []
 
 [contract]
